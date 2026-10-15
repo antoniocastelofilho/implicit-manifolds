@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the book and the papers listed in README.md."
+title: "implicit-manifolds: companion code of the book Approximation of Implicitly Defined Manifolds"
+type: software
+authors:
+  - family-names: Castelo
+    given-names: Antonio
+  - family-names: Gameiro
+    given-names: Marcio
+  - family-names: Reia
+    given-names: Lucas Martinelli
+  - family-names: Jarra
+    given-names: Manoel
+  - family-names: Paz
+    given-names: Juliana Souza
+repository-code: "https://github.com/antoniocastelofilho/implicit-manifolds"
+preferred-citation:
+  type: book
+  title: "Approximation of Implicitly Defined Manifolds: Simplicial and Hypercube Methods Based on Counting and Enumeration"
+  authors:
+    - family-names: Castelo
+      given-names: Antonio
+    - family-names: Gameiro
+      given-names: Marcio
+    - family-names: Reia
+      given-names: Lucas Martinelli
+    - family-names: Jarra
+      given-names: Manoel
+    - family-names: Paz
+      given-names: Juliana Souza
+  publisher:
+    name: Springer
+  year: 2026

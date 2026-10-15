@@ -1,0 +1,21 @@
+\begin{table}[t]
+\caption{Marching and continuation on problems chosen to show their strengths. Marching Simplex (MS) and Continuation
+Simplex (CS): time in seconds, evaluations of $F$ and number of components found; the continuation methods start from one
+point. Last columns: time of the permutahedral tracing algorithm, of the generalized continuation hypercubes and of
+Fast Continuation Hypercubes, which find the same component as CS. Grids: $40^3$ and $24^4$ cubes for the blobs,
+$24\cdot20^2\cdot30$ and $12^2\cdot10^4$ for the Bratu problems.}
+\label{tab:cmp:strengths}
+\centering\footnotesize\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}llrrcrrcrrr@{}}
+\toprule
+& & \multicolumn{3}{c}{MS} & \multicolumn{3}{c}{CS} & PTA & GCCH & FCH\\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-9}\cmidrule(lr){10-10}\cmidrule(l){11-11}
+Problem & $(n,k)$ & time & eval. & comp. & time & eval. & comp. & time & time & time\\
+\midrule
+blobs, $\R^3$ & $(3,1)$ & 0.113 & 512\,000 & 11 & 0.0017 & 6\,660 & 1 & 0.005 & 0.0032 & 0.0018\\
+blobs, $\R^4$ & $(4,1)$ & 2.2 & 5\,308\,416 & 11 & 0.0025 & 6\,315 & 1 & 0.0055 & 0.0036 & 0.0012\\
+Bratu, $N=3$ & $(4,3)$ & 4.5 & 4\,608\,000 & 1 & 0.00021 & 1\,195 & 1 & 0.00042 & 0.0025 & 0.00044\\
+Bratu, $N=5$ & $(6,5)$ & 1\,219 & 92\,160\,000 & 1 & 0.00066 & 1\,680 & 1 & 0.00066 & 0.080 & 0.00026\\
+\bottomrule
+\end{tabular}
+\end{table}

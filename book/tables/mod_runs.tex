@@ -1,0 +1,26 @@
+\begin{table}[t]
+\caption{Implicit models approximated by Marching Simplex on $K_1$ (MS) and by Fast Continuation Hypercubes
+(FCH) on the same grids: number of cells, time of the approximation (seconds) and, for FCH, total time
+including the construction of the skeleton. For the three-dimensional models both methods give the same
+Euler characteristic.}
+\label{tab:mod:runs}
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lclrrrrrr@{}}
+\toprule
+Model & $n$ & grid & MS cells & MS (s) & FCH cells & FCH (s) & total (s) & $\chi$\\
+\midrule
+Two spheres, sharp union & 3 & $40\times28^2$ & 19\,888 & 0.13 & 4\,334 & 0.01 & 0.07 & $2$\\
+Two spheres, $p=8$ & 3 & $40\times28^2$ & 19\,716 & 0.16 & 4\,258 & 0.01 & 0.06 & $2$\\
+Eight tori, $p=10$ & 3 & $80^2\times20$ & 64\,478 & 0.75 & 13\,390 & 0.10 & 0.25 & $-16$\\
+Knot of spheres, $p=30$ & 3 & $72^2\times42$ & 71\,430 & 7.53 & 15\,726 & 0.86 & 1.08 & $0$\\
+Three spheres, $p=10$ & 3 & $64^2\times44$ & 10\,172 & 0.33 & 2\,234 & 0.01 & 0.03 & $2$\\
+Pipe/box, sharp & 3 & $56^2\times112$ & 143\,208 & 1.11 & 26\,680 & 0.07 & 0.43 & $-8$\\
+Pipe/box, $p=8$ & 3 & $56^2\times112$ & 137\,618 & 3.05 & 26\,642 & 0.34 & 0.62 & $-8$\\
+Two balls, $p=8$ & 4 & $36\times22^3$ & 947\,234 & 13.84 & 57\,174 & 0.35 & 2.74 & --\\
+Drilled ball, $p=6$ & 4 & $32^4$ & 1\,667\,832 & 42.38 & 96\,560 & 1.36 & 6.90 & --\\
+Tube around a curve & 4 & $44^2\times22^2$ & 985\,740 & 157.21 & 61\,164 & 10.50 & 14.78 & --\\
+\bottomrule
+\end{tabular}
+\end{table}

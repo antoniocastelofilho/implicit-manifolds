@@ -1,0 +1,45 @@
+\begin{table}[t]
+\caption{Running times in seconds of the C++ implementations on the same grids: Marching Simplex on $K_1$ and
+on $J_1$ (MS), Continuation Simplex on $K_1$ (CS), permutahedral tracing (PTA), Generalized Combinatorial
+Continuation Hypercubes (GCCH) and Fast Continuation Hypercubes (FCH). Times are those of the approximation
+step; the construction of the skeleton by FCH is reported in the text. One core of an Intel Xeon at 2.8\,GHz.}
+\label{tab:cmp:cpp}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcl rrrrrr@{}}
+\toprule
+Manifold & $(n,k)$ & grid & MS $K_1$ & MS $J_1$ & CS & PTA & GCCH & FCH\\
+\midrule
+$S^2\subset\R^3$ & $(3,1)$ & $12^3$ & 0.001 & 0.001 & 0.001 & 0.008 & 0.003 & 0.002\\
+$S^3\subset\R^4$ & $(4,1)$ & $8^4$ & 0.044 & 0.055 & 0.019 & 0.045 & 0.018 & 0.007\\
+$T^2\subset\R^4$ & $(4,2)$ & $10^4$ & 0.099 & 0.098 & 0.010 & 0.020 & 0.010 & 0.005\\
+$z=\cos w$ & $(4,2)$ & $10^4$ & 0.137 & 0.140 & 0.005 & 0.009 & 0.009 & 0.002\\
+$S^2\times S^1\subset\R^5$ & $(5,2)$ & $12^3\cdot8^2$ & 11.73 & 11.25 & 0.972 & 1.57 & 0.280 & 0.050\\
+$T^3\subset\R^6$ & $(6,3)$ & $8^6$ & 479 & 510 & 4.35 & 4.30 & 1.74 & 0.050\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[t]
+\caption{Size of the output and peak memory (MB) of the runs of Table~\ref{tab:cmp:cpp}: crossed $n$-simplices
+of $K_1$ and $J_1$ (the cells of Marching and Continuation Simplex), transversal $k$-simplices traced by
+PTA, and crossed cubes (the cells of GCCH and FCH).}
+\label{tab:cmp:cppcells}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l rrrr rrrr@{}}
+\toprule
+ & \multicolumn{4}{c}{cells / simplices} & \multicolumn{4}{c}{memory (MB)}\\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Manifold & $K_1$ & $J_1$ & PTA & cubes & CS & PTA & GCCH & FCH\\
+\midrule
+$S^2\subset\R^3$ & 2\,616 & 2\,496 & 1\,706 & 584 & 3.9 & 4.0 & 4.1 & 3.8\\
+$S^3\subset\R^4$ & 26\,952 & 30\,336 & 8\,586 & 1\,680 & 4.1 & 4.4 & 4.1 & 4.0\\
+$T^2\subset\R^4$ & 12\,868 & 13\,376 & 9\,612 & 1\,296 & 3.9 & 4.3 & 4.0 & 3.8\\
+$z=\cos w$ & 4\,338 & 4\,376 & 3\,381 & 527 & 4.0 & 4.3 & 4.2 & 4.1\\
+$S^2\times S^1\subset\R^5$ & 534\,930 & 549\,408 & 235\,442 & 12\,992 & 16.9 & 18.3 & 4.5 & 4.0\\
+$T^3\subset\R^6$ & 988\,616 & 1\,048\,064 & 524\,984 & 9\,408 & 31.0 & 35.5 & 4.4 & 4.0\\
+\bottomrule
+\end{tabular}
+\end{table}

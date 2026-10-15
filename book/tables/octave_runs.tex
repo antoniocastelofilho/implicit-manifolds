@@ -1,0 +1,30 @@
+\begin{tabular}{@{}llcrrrr@{}}
+\toprule
+Manifold & $(n,k)$ & grid & method & time (s) & cells & $\chi$\\
+\midrule
+sphere $S^2\subset\R^3$ & $(3,1)$ & $12^3$ & MS & 24.0 & 2616 & 2\\
+ &  &  & CMH & 14.0 & 584 & 2\\
+ &  &  & GCMH & 7.1 & 584 & 2\\
+ &  &  & GCCH & 6.7 & 584 & 2\\
+\addlinespace
+sphere $S^3\subset\R^4$ & $(4,1)$ & $8^4$ & GCMH & 114.2 & 1680 & 0\\
+ &  &  & GCCH & 117.4 & 1680 & 0\\
+\addlinespace
+torus $T^2\subset\R^4$ & $(4,2)$ & $10^4$ & GCCH & 27.1 & 1296 & 0\\
+\addlinespace
+two spheres, $\min$ & $(3,1)$ & $20\times14\times14$ & MS & 101.9 & 4372 & 2\\
+ &  &  & GCMH & 19.9 & 944 & 2\\
+\addlinespace
+two spheres, $p=8$ & $(3,1)$ & $20\times14\times14$ & MS & 92.9 & 4324 & 2\\
+ &  &  & GCMH & 23.7 & 928 & 2\\
+\addlinespace
+three spheres, $\cap$ & $(3,1)$ & $30\times30\times20$ & MS & 296.6 & 2172 & 2\\
+ &  &  & GCMH & 83.0 & 468 & 2\\
+\addlinespace
+eight tori & $(3,1)$ & $30\times30\times8$ & MS & 187.7 & 8608 & -16\\
+ &  &  & GCMH & 41.4 & 1704 & -16\\
+\addlinespace
+knot of spheres & $(3,1)$ & $32\times32\times22$ & MS & 264.5 & 15966 & 0\\
+ &  &  & GCMH & 85.5 & 3528 & 0\\
+\bottomrule
+\end{tabular}

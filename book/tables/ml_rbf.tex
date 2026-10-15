@@ -1,0 +1,28 @@
+\begin{table}[t]
+\caption{Quadric, RBF and Hermite RBF local approximations in the partition of unity. Error: root mean square
+distance (times $10^{3}$) to the exact manifold of the vertices of the approximation after Gauss--Newton projection
+onto $F^{-1}(0)$, which measures the error of $F$ itself; the best value of each row is in bold. Times: construction
+of $F$ in seconds and one evaluation of $F$ in microseconds. Last column: percentage of the data cells that passed
+the coverage test and received a radial correction. All approximations have the correct Euler characteristic $0$.}
+\label{tab:ml:rbf}
+\centering\footnotesize\setlength{\tabcolsep}{2.0pt}
+\begin{tabular}{@{}llccccccccc r@{}}
+\toprule
+& & \multicolumn{3}{c}{error ($\times10^{3}$)} & \multicolumn{3}{c}{construction (s)} & \multicolumn{3}{c}{evaluation ($\mu$s)} & \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}
+$(n,k)$, noise & grid & quad. & RBF & HRBF & quad. & RBF & HRBF & quad. & RBF & HRBF & RBF\\
+\midrule
+\multirow{3}{*}{$(3,1)$, $\sigma{=}0.002$} & $16^2{\times}6$ & 4.36 & 1.95 & \textbf{1.41} & 0.8 & 4.5 & 9.5 & 2 & 4 & 3 & 68\% \\
+ & $24^2{\times}8$ & 1.26 & \textbf{0.56} & 0.62 & 0.5 & 5.9 & 12.7 & 2 & 4 & 5 & 69\% \\
+ & $36^2{\times}12$ & \textbf{0.56} & 0.67 & 0.56 & 0.6 & 9.3 & 11.0 & 1 & 4 & 3 & 69\% \\
+\midrule
+\multirow{3}{*}{$(4,2)$, $\sigma{=}0.002$} & $8^2{\times}6^2$ & 7.02 & 1.90 & \textbf{1.31} & 1.4 & 9.1 & 20.6 & 4 & 6 & 13 & 58\% \\
+ & $12^2{\times}8^2$ & 2.02 & \textbf{0.65} & 0.81 & 1.4 & 17.2 & 33.7 & 5 & 16 & 15 & 57\% \\
+ & $16^2{\times}10^2$ & 0.86 & \textbf{0.61} & 0.79 & 1.5 & 23.3 & 38.9 & 6 & 24 & 31 & 50\% \\
+\midrule
+\multirow{3}{*}{$(4,2)$, $\sigma{=}0.01$} & $8^2{\times}6^2$ & 8.21 & \textbf{2.46} & 2.85 & 1.3 & 8.4 & 20.5 & 3 & 9 & 13 & 65\% \\
+ & $12^2{\times}8^2$ & 2.42 & \textbf{2.25} & 3.25 & 1.1 & 17.2 & 32.0 & 9 & 14 & 20 & 60\% \\
+ & $16^2{\times}10^2$ & \textbf{2.20} & 2.88 & 3.62 & 1.6 & 23.5 & 40.9 & 11 & 19 & 26 & 54\% \\
+\bottomrule
+\end{tabular}
+\end{table}
